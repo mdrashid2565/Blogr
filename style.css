@@ -1,134 +1,202 @@
-/* Style resets : begins */
+/* Reset Styles */
 *,
-*::after,
-*::before {
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", serif;
-    font-family: "Overpass", sans-serif;
-
-}
-
-html, body {
-    font-size: 10px;
-}
-
-.main-container {
-    max-width: 1440px;
-    margin: 0 auto;
-    min-width: 320px;
-    
-}
-a,
-span,
-img {
-    display: inline-block;
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-/* Style resets : ends */
-
-/* Typography and Colors : begins */
-
-.font-family-Overpass {
     font-family: "Overpass", sans-serif;
 }
 
-.f-w-300 {
-    font-weight: 300;
-}
-.f-w-600 {
-    font-weight: 600;
-}
-.f-s-16{
-    font-size: 1.6rem;
+html {
+    font-size: 16px;
 }
 
-
-/* Typography and Colors : ends */
-
-
-/* Global Classes : begins */
-.text-center {
-    text-align: center;
-}
-.display-flex {
-    display: flex;
-}
-.align-center {
-    align-items: center;
-}
-.justify-center {
-    justify-content: center;
-}
-.justify-space-between {
-    justify-content: space-between;
-}
-.flex-wrap {
-    flex-wrap: wrap;
-}
-.w-100 {
-    width: 100%;
-}
+/* Global Classes */
 .container-max {
     max-width: 1358px;
     margin: 0 auto;
-    padding: 0 15px;    
+    padding: 0 20px;
     width: 100%;
 }
-.paddng-all {
-    padding: 2rem;
+
+.text-center {
+    text-align: center;
 }
 
-.gap-20 {
-    gap: 20px;
-}
-/* Global Classes : ends */
-
-/* Global style : starts */
-
-/* Header styling : starts */
-.header .wrapper {
-    background-color: hsl(355, 100%, 74%);
-    /* height: 100px; */
+/* Header Styling */
+.header {
+    /* background-color: hsla(355, 100%, 50%, 0.5); */
+    background-color: #f05a55;
     background-image: url(bg-pattern-intro-desktop.svg);
-    height: 500px;
+    min-height: 50vh;
     padding: 30px 0;
-    border: 1px solid red;
-    background-position: 35% 45%;
+    background-position: 25% 50%;
     border-radius: 0 0 0 60px;
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    max-width: 120px;
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+.login {
+color: white;
+}
+
 .sign-up {
     padding: 10px 30px;
     color: hsl(355, 100%, 74%);
-    background-color:  hsl(0, 0%, 100%);
-    border-radius: 20px;    
-    
+    background-color: white;
+    border-radius: 20px;
 }
-/* Header styling : ends */
 
-/* Hero styling : starts */
+/* Hero Section */
 .hero {
-    padding-top: 10%;
+    text-align: center;
+    padding-top: 5%;
+    color: white;
 }
-.hero, a {
-    color:hsl(0, 0%, 100%);
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
 }
-.hero h1{
-    font-size: 3.5em;
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
 }
-/* Hero styling : ends */
 
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 
+.hero-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
 
-/* Global style : ends */
+.hero-buttons .start {
+    background: white;
+    color: hsl(355, 100%, 74%);
+}
 
+/* Hamburger Menu for Mobile */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links li a {
+        color: hsl(355, 100%, 74%);
+    }
+
+    /* Move auth buttons inside menu */
+    .auth-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .auth-buttons a {
+        color: hsl(355, 100%, 74%);
+    }
+
+    .sign-up {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
