@@ -14,43 +14,45 @@
 <body>
     <header class="header">
         <div class="container-max">
-            <div class="wrapper">
-                <nav class="navbar">
-                    <div class="logo">
-                        <img src="logo.svg" alt="Blogr Logo">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="logo.svg" alt="Blogr Logo">
+                </div>
+
+                <!-- Hamburger Menu -->
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Connect</a></li>
+                    </ul>
+
+                    <!-- Auth Buttons inside menu -->
+                    <div class="auth-buttons">
+                        <a href="#" class="log-in">Login</a>
+                        <a href="#" class="sign-up">Sign Up</a>
                     </div>
+                </div>
+            </nav>
 
-                    <!-- Hamburger Menu -->
-                    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-                    <div class="nav-menu">
-                        <ul class="nav-links">
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Connect</a></li>
-                        </ul>
-
-                        <!-- Auth Buttons inside menu -->
-                        <div class="auth-buttons">
-                            <a href="#" class="login">Login</a>
-                            <a href="#" class="sign-up">Sign Up</a>
-                        </div>
-                    </div>
-                </nav>
-
-                <section class="hero">
-                    <h1>A modern publishing platform</h1>
-                    <p>Grow your audience and build your online brand</p>
-                    <div class="hero-buttons">
-                        <a href="#" class="start">Start for Free</a>
-                        <a href="#" class="learn">Learn More</a>
-                    </div>
-                </section>
-            </div>
+            <section class="hero">
+                <h1>A modern publishing platform</h1>
+                <p>Grow your audience and build your online brand</p>
+                <div class="hero-buttons">
+                    <a href="#" class="start">Start for Free</a>
+                    <a href="#" class="learn">Learn More</a>
+                </div>
+            </section>
         </div>
     </header>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-menu").classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>
