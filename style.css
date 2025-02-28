@@ -26,12 +26,11 @@ html {
 
 /* Header Styling */
 .header {
-    /* background-color: hsla(355, 100%, 50%, 0.5); */
-    background-color: #f05a55;
+    background-color: hsl(355, 100%, 74%);
     background-image: url(bg-pattern-intro-desktop.svg);
     min-height: 50vh;
     padding: 30px 0;
-    background-position: 25% 50%;
+    background-position: 25% 55%;
     border-radius: 0 0 0 60px;
 }
 
@@ -77,10 +76,10 @@ html {
     text-decoration: none;
     font-size: 1rem;
 }
-.login {
-color: white;
-}
 
+.log-in {
+    color: white;
+}
 .sign-up {
     padding: 10px 30px;
     color: hsl(355, 100%, 74%);
@@ -126,11 +125,12 @@ color: white;
 
 /* Hamburger Menu for Mobile */
 .menu-icon {
+    color: white;
     display: none;
     font-size: 30px;
     cursor: pointer;
-    color: white;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
