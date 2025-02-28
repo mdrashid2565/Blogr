@@ -1,0 +1,134 @@
+/* Style resets : begins */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;
+    font-family: "Overpass", sans-serif;
+
+}
+
+html, body {
+    font-size: 10px;
+}
+
+.main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-width: 320px;
+    
+}
+a,
+span,
+img {
+    display: inline-block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* Style resets : ends */
+
+/* Typography and Colors : begins */
+
+.font-family-Overpass {
+    font-family: "Overpass", sans-serif;
+}
+
+.f-w-300 {
+    font-weight: 300;
+}
+.f-w-600 {
+    font-weight: 600;
+}
+.f-s-16{
+    font-size: 1.6rem;
+}
+
+
+/* Typography and Colors : ends */
+
+
+/* Global Classes : begins */
+.text-center {
+    text-align: center;
+}
+.display-flex {
+    display: flex;
+}
+.align-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.w-100 {
+    width: 100%;
+}
+.container-max {
+    max-width: 1358px;
+    margin: 0 auto;
+    padding: 0 15px;    
+    width: 100%;
+}
+.paddng-all {
+    padding: 2rem;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+/* Global Classes : ends */
+
+/* Global style : starts */
+
+/* Header styling : starts */
+.header .wrapper {
+    background-color: hsl(355, 100%, 74%);
+    /* height: 100px; */
+    background-image: url(bg-pattern-intro-desktop.svg);
+    height: 500px;
+    padding: 30px 0;
+    border: 1px solid red;
+    background-position: 35% 45%;
+    border-radius: 0 0 0 60px;
+}
+.sign-up {
+    padding: 10px 30px;
+    color: hsl(355, 100%, 74%);
+    background-color:  hsl(0, 0%, 100%);
+    border-radius: 20px;    
+    
+}
+/* Header styling : ends */
+
+/* Hero styling : starts */
+.hero {
+    padding-top: 10%;
+}
+.hero, a {
+    color:hsl(0, 0%, 100%);
+}
+.hero h1{
+    font-size: 3.5em;
+}
+/* Hero styling : ends */
+
+
+
+/* Global style : ends */
+
+
